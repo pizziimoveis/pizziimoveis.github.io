@@ -368,7 +368,11 @@ nav.show div.icon-close {
   align-items: center;
   justify-content: space-between;
   margin: 10px 0px;
+  min-height: 20px;
   color: #6a6a6a;
+}
+.card p{
+  min-height: 80px;
 }
 .card small{
   font-weight: 600;
@@ -398,31 +402,28 @@ nav.show div.icon-close {
 .card .swiper {
   border-radius: 20px;
 }
-.swiper-slide {
-  height: 240px;
-  display: inherit;
-  width: auto !important;
-  max-width: 100% !important;
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
+
+.swiper-wrapper {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  z-index: 1;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
+  transition-property: transform;
+  box-sizing: content-box;
+}
+
+.swiper-slide {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition-property: transform;
 }
 
 .swiper-slide img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
   object-position: center;
 }
@@ -637,6 +638,41 @@ footer .social a:hover {
   footer .logo {
     font-size: 2.25rem;
   }
+}
+/* box view detail */
+#box-detail-view {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  top: 0px;
+  left: 0px;
+  z-index: 1000;
+  overflow: auto;
+  padding: 20px;
+  display: none;
+}
+.button-close-box{
+  font-size: 30px;
+  float: right;
+  margin: 0px 10px 10px 10px;
+  padding: 0px 10px 10px 10px;
+  color: var(--title-color);
+}
+.box-detail-content {
+  /* display: flex;
+  flex-direction: row;
+  margin: 50px 0px 0px 0px; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.box-detail-column{
+  width: 50%;
+}
+.box-detail-map, .mapouter, .gmap_canvas{
+  width: 100% !important;
 }
 @media (min-width: 992px) {
   :root {
