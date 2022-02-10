@@ -428,35 +428,76 @@ nav.show div.icon-close {
   object-position: center;
 }
 
-.swiper-container.fullscreen {
-  height: 100vh;
-}
-.fullscreen .swiper-slide img {
-  pointer-events: none;
-}
-.fullscreen .swiper-slide .backdrop {
-  background: #000;
-  opacity: .7;
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  z-index: 1;
+
+
+
+.close-button {
+  display: none;
+  height: 45px;
+  width: 45px;
+  color: #fff !important;
+  background-color: var(--title-color) !important;
+  border-color: var(--title-color) !important;
+  opacity: 1 !important;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  font-size: 32px;
+  text-align: center;
   cursor: pointer;
-}
-.fullscreen .swiper-slide .close-button {
-  background: #000;
-  color: #fff;
-  font-size: 16px;
-  font-family: sans-serif;
-  padding: 10px 18px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 4;
-  cursor: pointer;
+  z-index: 9999;
 }
 
+
+.close-button:hover,
+.close-button:active {
+  opacity: 1;
+}
+
+.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #161418;
+  border-radius: 0px;
+  z-index: 1000;
+}
+
+.fullscreen .swiper-wrapper {
+  height: 100% !important;
+  width: auto !important;
+}
+.fullscreen .gallery-top .swiper-slide {
+  cursor: default;
+  background-size: contain;
+}
+
+.fullscreen .close-button {
+  display: block;
+}
+
+.fullscreen .gallery-top {
+  height: 100%
+}
+
+.fullscreen .gallery-thumbs {
+  background-color: #000;
+  height: 20%;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  opacity: 0;
+  z-index: 10;
+  transition: opacity .3s ease-in-out;
+  transition-delay: .5s;
+}
+
+.fullscreen .gallery-thumbs:hover {
+  opacity: 1;
+  transition-delay: 0s;
+}
 
 
 
@@ -679,7 +720,7 @@ footer .social a:hover {
   padding: 20px 80px 80px 80px;
   display: none;
 }
-.button-close-box{
+.button-close{
   font-size: 30px;
   float: right;
   margin: 0px 10px 10px 10px;
@@ -689,6 +730,7 @@ footer .social a:hover {
   border-radius: 50%;
   line-height: 35px;
   cursor: pointer;
+  background-color: #fff;
 }
 .box-detail-content {
   /* display: flex;
