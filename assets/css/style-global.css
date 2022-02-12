@@ -429,8 +429,14 @@ nav.show div.icon-close {
 }
 .swiper-button-next, .swiper-button-prev {
   color: #fff;
+  padding: 0px 20px;
 }
-
+.swiper-button-next {
+  right: 0px;
+}
+.swiper-button-prev {
+  left: 0px;
+}
 .close-button {
   display: none;
   height: 45px;
