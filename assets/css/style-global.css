@@ -374,6 +374,11 @@ nav.show div.icon-close {
 .card p{
   min-height: 80px;
 }
+.card:hover {
+  cursor: pointer;
+  transform: translateY(-10px) !important;
+  box-shadow: 0 24px 32px -16px rgb(0 87 184 / 16%);
+}
 .identificador-imovel{
   font-weight: 600;
   color: #6a6a6a;
@@ -791,6 +796,38 @@ footer .social a:hover {
   -webkit-font-smoothing: antialiased;
 }
 
+
+#box-cookie-question {
+  position: fixed;
+  bottom: 50px;
+  padding: 10px 70px;
+  justify-content: center;
+  width: 100%;
+}
+.modal-cookie-question .button{
+  margin: 0px 30px;
+  border: none;
+  cursor: pointer;
+}
+.modal-cookie-question .button:hover {
+  opacity: 0.8;
+}
+.modal-cookie-question {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 2px 1px -1px rgb(0 0 0 / 12%), 0px 1px 3px 0px rgb(0 0 0 / 20%);
+  text-align: justify;
+  padding: 25px;
+}
+.cookie-icon {
+  width: 70px;
+  margin: 0px 20px;
+}
 /* === Scroll down wrapper === */
 #scrooll-down-wrapper{
   color: var(--base-color);
@@ -842,6 +879,13 @@ footer .social a:hover {
   }
   .box-detail-column {
     width: 100%;
+  }
+  .modal-cookie-question {
+    display: flex;
+    flex-direction: column;
+  }
+  #box-cookie-question{
+    padding: 10px;
   }
 }
 @media (max-width: 370px) {
