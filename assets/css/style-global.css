@@ -613,20 +613,21 @@ footer i {
   font-size: 1.5rem;
   color: var(--text-color-light);
 }
-footer .links {
+.links {
   color: var(--text-color-light);
 }
-footer .links svg{
+.links svg{
   padding: 0px 10px;
 }
 footer .social {
   grid-auto-flow: column;
   width: fit-content;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 footer .social a {
   transition: 0.3s;
   display: inline-block;
+  color: var(--text-color-light);
 }
 footer .social a:hover {
   transform: translateY(-8px);
@@ -705,9 +706,13 @@ footer .social a:hover {
   #contato .container {
     grid-auto-flow: column;
     align-items: center;
+    justify-content: space-around;
   }
   #contato .text {
     max-width: 25rem;
+  }
+  #contato .img-duvida {
+    width:200px;height: 200px;object-fit: contain;border-radius: 50%;
   }
   footer.section {
     padding: 3.75rem 0;
