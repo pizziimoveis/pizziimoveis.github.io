@@ -40,10 +40,10 @@ img {
   --body-font: "DM Sans", sans-serif;
   --base-color: #31B46D;
   /*#305cde;*/
-  --base-color-second: #55C186
+  --base-color-second: #55C186;
     /*#30b3de*/
-  ;
-  --base-color-alt: #44BB7A;
+  --base-color-alt: #5bc088;
+  /* --base-color-alt: #44BB7A; */
   /*#5b30de;*/
   --title-color: #1cac5e;
   /* #305cde;*/
@@ -92,6 +92,7 @@ body {
   border-radius: 15px;
   font: 500 1rem var(--body-font);
   transition: background 0.3s;
+  cursor: pointer;
 }
 
 .button:hover {
@@ -126,6 +127,7 @@ body {
   opacity: 0;
   transition: 0.3s;
   transform: translateY(100%);
+  z-index: 2;
 }
 
 .back-to-top.show {
@@ -161,7 +163,7 @@ body {
 }
 
 .section header {
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
   z-index: 2;
 }
 
@@ -241,7 +243,7 @@ nav ul li a::after {
 
   position: absolute;
   left: 0;
-  bottom: -1.5rem;
+  bottom: -1.6rem;
 
   transition: width 0.2s;
 }
@@ -321,17 +323,24 @@ nav.show div.icon-close {
 
 .contanier-menu-filter {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
+  color: var(--base-color);
+  position: relative;
+}
+.contanier-menu-order {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
   color: var(--base-color);
   position: relative;
 }
 
 .box-menu-filter-imoveis {
-  background-color: white;
+  /* background-color: white; */
   border-radius: 20px;
-  padding: 10px;
-  opacity: 0;
+  margin-bottom: 20px;
+  /* opacity: 0; */
 }
 
 .menu-filter-order {
@@ -339,6 +348,7 @@ nav.show div.icon-close {
   border-radius: 20px;
   padding: 10px;
   cursor: pointer;
+  min-width: 135px;
 }
 .menu-filter-order:hover {
   background-color: #f6f6f6;
@@ -496,6 +506,9 @@ nav.show div.icon-close {
   border-radius: 20px;
   text-align: left;
   background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card i {
@@ -819,6 +832,13 @@ footer .social a:hover {
   transform: translateY(-8px);
 }
 
+#contato .img-duvida {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
 /*========= MEDIA RESPONSIVO =========*/
 @media (min-width: 1200px) {
   .container {
@@ -851,6 +871,9 @@ footer .social a:hover {
   nav .menu ul {
     display: flex;
     gap: 2rem;
+    align-content: center;
+    flex-direction: row;
+    align-items: center;
   }
 
   nav .menu ul li a.title {
@@ -913,13 +936,6 @@ footer .social a:hover {
 
   #contato .text {
     max-width: 25rem;
-  }
-
-  #contato .img-duvida {
-    width: 200px;
-    height: 200px;
-    object-fit: contain;
-    border-radius: 50%;
   }
 
   footer.section {
@@ -1015,10 +1031,19 @@ footer .social a:hover {
 .title-button-contact {
   font: 400 1rem var(--body-font);
   border: solid 3px var(--base-color);
-  padding: 10px;
+  padding: 5px;
   border-radius: 15px;
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.title-button-contact .fa-whatsapp{
+  font-size: 20px;
+  padding: 0px 5px;
 }
 
 
@@ -1028,6 +1053,7 @@ footer .social a:hover {
   padding: 10px 70px;
   justify-content: center;
   width: 100%;
+  z-index: 1000;
 }
 
 .modal-cookie-question .button {
