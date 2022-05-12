@@ -327,6 +327,7 @@ nav.show div.icon-close {
   justify-content: space-between;
   color: var(--base-color);
   position: relative;
+  align-items: flex-end;
 }
 .contanier-menu-order {
   display: flex;
